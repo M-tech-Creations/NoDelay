@@ -13,6 +13,8 @@
 
 #include<NoDelay.h>
 
+void ledBlink();/Must declare function before noDelay 
+
 noDelay LEDtime(1000, ledBlink);//Creats a noDelay varible set to 1000ms, will call ledBlink function
 int LEDpin = 13;
 int ledState = LOW;
