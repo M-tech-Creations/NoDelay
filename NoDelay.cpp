@@ -33,16 +33,17 @@
 /**************************************************************************/
 noDelay::noDelay(void)
 {
+	
 	preMills = 0;
 	setdelay(0);
 }
-noDelay::noDelay(int dtime)
+noDelay::noDelay(unsigned long dtime)
 {
 	preMills = 0;
 	setdelay(dtime);
 }
 
-noDelay::noDelay(int dtime, funTocall funcall)
+noDelay::noDelay(unsigned long dtime, funTocall funcall)
 {
 	preMills = 0;
 	setdelay(dtime);

@@ -36,8 +36,8 @@ typedef void (*funTocall)(void);
 class noDelay{
 	public:
 	noDelay(void);
-	noDelay(int dtime);
-	noDelay(int dtime, funTocall funcall);
+	noDelay(unsigned long dtime);
+	noDelay(unsigned long dtime, funTocall funcall);
 	
 	
 	void setdelay(unsigned long);
