@@ -9,6 +9,7 @@
     @section  HISTORY
 
     v1.0 - First release
+	v1.1 - Fixed issue with int vs unsigned long for time limit
 */
 /**************************************************************************/
 
