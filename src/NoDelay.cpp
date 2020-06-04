@@ -10,6 +10,8 @@
 
     v1.0 - First release
 	v1.1 - Fixed issue with int vs unsigned long for time limit
+	v2.0 - Changed need for separate update checks / function calls
+	       Added start function to restart the timer when you want
 */
 /**************************************************************************/
 
@@ -49,6 +51,7 @@ noDelay::noDelay(unsigned long dtime, funTocall funcall)
 	preMills = 0;
 	setdelay(dtime);
 	_funcall = funcall;
+	use_function = true;
 }
 
 /*========================================================================*/
@@ -70,9 +73,23 @@ void noDelay::setdelay(unsigned long dtime)
 	delaytime = dtime;
 }
 
+/*!
+     @brief  Used to restart the Delay Time to 0.
+            Allows you to better time when delays happen as the 0 time
+			happens when this is called
+     
+     
+*/
+/**************************************************************************/
+void noDelay::start()
+{
+	preMills = 0;
+}
+
 /**************************************************************************/
 /*!
      @brief  Checks to see is delay time has passed and can then run code
+	 Will run function call if one was used
      
      @returns boot: true if time to update, false if not 
 */
@@ -83,7 +100,14 @@ bool noDelay::update()
 	if (curMills - preMills >= delaytime)
 	{
 		preMills = curMills;
-		return true;
+		if (use_function == true){
+			_funcall();
+			return true;
+		}
+		else{
+			return true;
+		}
+		
 	}
 	
 	else
@@ -94,7 +118,7 @@ bool noDelay::update()
 /**************************************************************************/
 /*!
      @brief  Checks to see is delay time has passed and then runs function
-     
+     Deprecated 
      
 */
 /**************************************************************************/

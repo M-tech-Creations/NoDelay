@@ -13,7 +13,7 @@
 
 #include<NoDelay.h>
 
-void ledBlink();//Must declare function before noDelay 
+void ledBlink();//Must declare function before noDelay, function can not take arguments
 
 noDelay LEDtime(1000, ledBlink);//Creats a noDelay varible set to 1000ms, will call ledBlink function
 int LEDpin = 13;
@@ -24,7 +24,7 @@ void setup() {
 }
 
 void loop() {
-    LEDtime.fupdate();//will check if set time has past and if so will run set function
+    LEDtime.update();//will check if set time has past and if so will run set function
 }
 
 void ledBlink()
