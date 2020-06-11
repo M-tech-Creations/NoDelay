@@ -12,6 +12,7 @@
 	v1.1 - Fixed issue with int vs unsigned long for time limit
 	v2.0 - Changed need for separate update checks / function calls
 	       Added start function to restart the timer when you want
+	v2.0.1 - Fixed start function to make it really work
 */
 /**************************************************************************/
 
@@ -83,7 +84,7 @@ void noDelay::setdelay(unsigned long dtime)
 /**************************************************************************/
 void noDelay::start()
 {
-	preMills = 0;
+	preMills = millis();
 }
 
 /**************************************************************************/
