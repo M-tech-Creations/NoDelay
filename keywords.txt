@@ -12,4 +12,5 @@ noDelay	KEYWORD1
 setdelay	KEYWORD2
 update	KEYWORD2
 start	KEYWORD2
+stop	KEYWORD2
 fupdate	KEYWORD2

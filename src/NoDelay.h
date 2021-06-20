@@ -7,7 +7,7 @@
 
     The MIT License (MIT)
 
-	Copyright (c) 2020 Mario Avenoso (M-tech Creations)
+	Copyright (c) 2021 Mario Avenoso (M-tech Creations)
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -37,18 +37,22 @@ class noDelay{
 	public:
 	noDelay(void);
 	noDelay(unsigned long dtime);
+	noDelay(unsigned long dtime,bool isenabled);
 	noDelay(unsigned long dtime, funTocall funcall);
+	noDelay(unsigned long dtime, funTocall funcall,bool is_enabled);
 	
 	
 	void setdelay(unsigned long);
 	bool update();
 	void fupdate(); //Deprecated 
 	void start();
+	void stop();
 	
 	private:
 	unsigned long preMills, curMills, delaytime;
 	funTocall _funcall;
 	bool use_function = false;
+	bool isenabled = true;
 };
 
 #endif
