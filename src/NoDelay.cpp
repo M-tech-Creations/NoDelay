@@ -124,8 +124,13 @@ void noDelay::stop()
 /**************************************************************************/
 bool noDelay::update()
 {
+	if (!isenabled)
+	{
+		return false;
+	}
+	
 	curMills = millis();
-	if (curMills - preMills >= delaytime && isenabled)
+	if (curMills - preMills >= delaytime)
 	{
 		preMills = curMills;
 		if (use_function == true){
