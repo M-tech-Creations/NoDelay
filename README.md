@@ -29,8 +29,8 @@ To create a NoDelay object:
 ```
 noDelay someKindofDelay(1000); Makes a delay object of given time in ms
 noDelay someKindofDelay(1000, some_function_to_call); Makes a delay object of given time in ms that will call the given void function
-noDelay someKindofDelay(1000,flase); Makes a delay object of given time in ms but keeps it from running
-noDelay someKindofDelay(1000, some_function_to_call,false); Makes a delay object of given time in ms that will call the given void function but keeps it from running
+noDelay someKindofDelay(1000, false); Makes a delay object of given time in ms but keeps it from running
+noDelay someKindofDelay(1000, some_function_to_call, false); Makes a delay object of given time in ms that will call the given void function but keeps it from running
 ```
 
 NoDelay Functions:
