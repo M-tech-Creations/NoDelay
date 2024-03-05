@@ -13,4 +13,5 @@ setdelay	KEYWORD2
 update	KEYWORD2
 start	KEYWORD2
 stop	KEYWORD2
+enabled	KEYWORD2
 fupdate	KEYWORD2

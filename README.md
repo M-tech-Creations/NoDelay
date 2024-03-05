@@ -52,5 +52,7 @@ start() will also allow you to start or restart NoDelay if stop() was used.
 
 *Example*: If you wanted check a sensor ever 5 seconds but only after a switch was flipped. You would stop NoDelay either but setting NoDelay to false when creating the object or by using stop(). Then when the switch is flipped set youDelayvar.start(). This will allow the delay to go though. When the switch is flipped back off, set youDelayvar.stop()
 
+**enabled** : Check to see if NoDelay is enabled or not. If timer is enabled (start) retuns true, otherwise returns false (stop).
+
 
 **fupdate** : This function is deprecated and should not be used as it will be removed at some point in the future. If has the same functionality as update() but only for NoDelay objects that have been created with a function to call. Unlike update(), fupdate() does not return anything and will only call the function it was set to when the delay time has passed. It will also not work when stop() has been set. With update() being able to be used for both functions and non function delays, this is no longer needed and only being kept around to keep old code compatibly for now

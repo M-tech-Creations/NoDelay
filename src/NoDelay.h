@@ -47,6 +47,7 @@ class noDelay{
 	void fupdate(); //Deprecated 
 	void start();
 	void stop();
+	bool enabled();
 	
 	private:
 	unsigned long preMills, curMills, delaytime;

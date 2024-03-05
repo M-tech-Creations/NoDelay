@@ -15,6 +15,8 @@
 	v2.0.1 - Fixed start function to make it really work
 	v2.1 - Added stop function to stop NoDely from running code when
 			update() is called
+	v2.2 - Added enabled function to return true of false if timer is
+			enabled
 */
 /**************************************************************************/
 
@@ -116,10 +118,22 @@ void noDelay::stop()
 
 /**************************************************************************/
 /*!
-     @brief  Checks to see is delay time has passed and can then run code
+	 @brief  Looks to see if noDelay timer is enabled or not
+
+	 @returns boot: true if enabled, false if not
+*/
+/**************************************************************************/
+bool noDelay::enabled()
+{
+	return isenabled;
+}
+
+/**************************************************************************/
+/*!
+	 @brief  Checks to see is delay time has passed and can then run code
 	 Will run function call if one was used
-     
-     @returns boot: true if time to update, false if not 
+
+	 @returns boot: true if time to update, false if not
 */
 /**************************************************************************/
 bool noDelay::update()
