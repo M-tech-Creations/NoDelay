@@ -1,6 +1,7 @@
-#NoDelay Library #
+# NoDelay Library
 
 This is a library for using the builtin Arduino mills function without all the setup.
+
 The write up for this library can be found Here
     ------> http://mario.mtechcreations.com/programing/nodelay-arduino-library/
 
@@ -21,6 +22,7 @@ The delay time can be change using setDelay using a time in miliseconds.
 The use of the fupdate function is not Deprecated and will be removed in the future.
 
 Written by Mario Avenoso of mtechcreations.com
+
 MIT license, check license.txt for more information
 
 ## Quick Usage ##
@@ -33,7 +35,7 @@ noDelay someKindofDelay(1000, false); Makes a delay object of given time in ms b
 noDelay someKindofDelay(1000, some_function_to_call, false); Makes a delay object of given time in ms that will call the given void function but keeps it from running
 ```
 
-NoDelay Functions:
+### NoDelay Functions:
 
 **update()** : When called it will check if the amount of time set has passed. If the object was only set with a delay time, the function will return true, otherwise it will return false. If a function was passed to the object when created, after the amount of time specified has passed, when checking update, the function will be called and return a true. This function will always return false if NoDelay is set to stop
 
